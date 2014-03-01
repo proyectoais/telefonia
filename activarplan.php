@@ -38,7 +38,7 @@
 			<div id="espac_cont">
 				<fieldset id="fields">
 					<legend>Activar Plan</legend>
-					<form id ="foracp" method="post" onSubmit="return validar()">
+					<form id ="foracp" method="post" action="add.php" onSubmit="return validar()">
  						<label>Seleccione el n&uacute;mero de tel&eacute;fono:</label>
 							<?php include("conexion.php"); ?>
 
