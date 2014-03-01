@@ -29,8 +29,8 @@
 		<div id="contenido">
 			<div id="menu">
 				<?php
-  			include("head.html");
-  			?>
+  				include("head.html");
+  				?>
 			</div>
 			<div id="espac_cont">
 				<fieldset id="fields">
