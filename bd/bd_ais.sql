@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 01-03-2014 a las 00:45:10
--- Versión del servidor: 5.6.12-log
--- Versión de PHP: 5.4.16
+-- Tiempo de generación: 01-03-2014 a las 17:26:52
+-- Versión del servidor: 5.5.8
+-- Versión de PHP: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `llamada` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `llamada`
+-- Volcar la base de datos para la tabla `llamada`
 --
 
 INSERT INTO `llamada` (`Id`, `Fecha`, `Hora`, `Duracion`, `Costo`) VALUES
@@ -58,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `llamada_telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `llamada_telefono`
+-- Volcar la base de datos para la tabla `llamada_telefono`
 --
 
 INSERT INTO `llamada_telefono` (`id_tfno`, `Id_llamada`, `fecha`) VALUES
@@ -72,20 +71,23 @@ INSERT INTO `llamada_telefono` (`id_tfno`, `Id_llamada`, `fecha`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `plan` (
-  `Id_plan` int(11) NOT NULL,
+  `Id_plan` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(30) NOT NULL,
   `Tipo_plan` varchar(30) NOT NULL,
+  `Tipo_tele` varchar(30) NOT NULL,
   `Precio` int(11) NOT NULL,
-  PRIMARY KEY (`Id_plan`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`Id_plan`),
+  UNIQUE KEY `Nombre` (`Nombre`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Volcado de datos para la tabla `plan`
+-- Volcar la base de datos para la tabla `plan`
 --
 
-INSERT INTO `plan` (`Id_plan`, `Nombre`, `Tipo_plan`, `Precio`) VALUES
-(1, 'Plan habla 200', 'normal', 80),
-(2, 'Plan habla 500', 'especial', 20);
+INSERT INTO `plan` (`Id_plan`, `Nombre`, `Tipo_plan`, `Tipo_tele`, `Precio`) VALUES
+(1, 'Plan habla 200', 'normal', 'fija', 80),
+(2, 'Plan habla 500', 'especial', 'celular', 20),
+(3, 'Plan habla mas', 'normal', 'celular', 80);
 
 -- --------------------------------------------------------
 
@@ -96,17 +98,19 @@ INSERT INTO `plan` (`Id_plan`, `Nombre`, `Tipo_plan`, `Precio`) VALUES
 CREATE TABLE IF NOT EXISTS `plan_telefono` (
   `id_tfno` varchar(20) NOT NULL,
   `id_plan` int(11) NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_tfno`,`id_plan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `plan_telefono`
+-- Volcar la base de datos para la tabla `plan_telefono`
 --
 
 INSERT INTO `plan_telefono` (`id_tfno`, `id_plan`, `fecha`) VALUES
-('2121234567', 1, '2014-02-09'),
-('4147483647', 2, '2014-02-01');
+('2121234567', 1, '0000-00-00 00:00:00'),
+('4124756630', 2, '2014-03-01 12:53:04'),
+('4124756630', 3, '2014-03-01 12:36:01'),
+('4147483647', 2, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -120,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `sva` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `sva`
+-- Volcar la base de datos para la tabla `sva`
 --
 
 INSERT INTO `sva` (`Id`, `Nombre`) VALUES
@@ -141,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `sva_telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `sva_telefono`
+-- Volcar la base de datos para la tabla `sva_telefono`
 --
 
 INSERT INTO `sva_telefono` (`id_tfno`, `id_sva`, `fecha`) VALUES
@@ -164,13 +168,10 @@ CREATE TABLE IF NOT EXISTS `telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `telefono`
+-- Volcar la base de datos para la tabla `telefono`
 --
 
 INSERT INTO `telefono` (`Numero`, `Marca`, `Modelo`, `Fabricacion`, `Tipo`) VALUES
-('2121234567', 'Sony', 'KX-20', 2008, 'Fija'),
+('2121234567', 'Sony', 'KX-20', 2008, 'fija'),
+('4124756630', 'Blackberry', 'Curve 8520', 2008, 'celular'),
 ('4147483647', 'Nokia', 'X3-02', 2010, 'celular');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

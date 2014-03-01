@@ -5,7 +5,7 @@
 
 	$query ="INSERT INTO  plan_telefono (id_tfno ,id_plan,fecha)VALUES ('$n_tel', '$n_pl',CURRENT_TIMESTAMP)";
 	$e_query = mysql_query($query,$link);
-
+	mysql_close($link); 
 	if ($e_query){
 		print "<script type=\"text/javascript\">";
 		    print "alert('El plan ha sido activado');\n";

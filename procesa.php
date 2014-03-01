@@ -23,6 +23,7 @@ $nu= $_POST["numero"];
 	echo "<option value='".$ej_busq['Id_plan']."'>".$ej_busq['Nombre']."</option>";
 	}while($ej_busq=mysql_fetch_assoc($busq));
 	echo "</select>";
-     
+
+    php mysql_close($link); 
  }
 ?>
