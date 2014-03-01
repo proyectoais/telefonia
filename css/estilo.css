@@ -21,10 +21,15 @@ hr
 
 #encabezado
 {
-	height: auto;
+	height: 130px;
 	width: 480px;
 	margin: 0px auto 0px auto;
 
+}
+
+#encabezado > img 
+{
+    padding-top: 5px;
 }
 
 #titulo
@@ -33,7 +38,8 @@ hr
 	font-size: 22;
 	font-weight: bold;
     position:  relative;
-    top: -50px;
+    top: -34px;
+    left: 124px;
 }
 
 #pie
@@ -42,6 +48,36 @@ hr
     background-color: black;
     color: white; 
 }
+
+label {
+    display:block;
+    margin-top:10px;
+    letter-spacing:1px;
+}
+
+#in, textarea {
+    width:200px;
+    height:27px;
+    border:2px solid #000000;
+    padding:10px;
+    
+}
+ 
+textarea {
+    height:50px;
+}
+
+select{
+    width: 200px;
+}
+
+#fields
+{
+    width: 280px;
+    margin: 5px auto 0px auto;
+}
+
+
 
 /*Menu*/
 .menu,
