@@ -12,9 +12,14 @@
 		</div>
 		<hr>
 		<div id="contenido">
-			<?php
-	  			include("head.html");
-	  		?>
+			<div id="menu">
+				<?php
+	  				include("head.html");
+	  			?>
+			</div>
+			<div id="espac_cont">
+				Bienvenido, arreglar css y texto de bienvenida
+			</div>
 		</div>
 
 		<!--<div id="pie">
