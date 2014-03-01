@@ -20,7 +20,7 @@ $nu= $_POST["numero"];
 	$suma2=0;
 
 	do{ ++$suma2;
-	echo "<option value='".$ej_busq['Nombre']."'>".$ej_busq['Nombre']."</option>";
+	echo "<option value='".$ej_busq['Id_plan']."'>".$ej_busq['Nombre']."</option>";
 	}while($ej_busq=mysql_fetch_assoc($busq));
 	echo "</select>";
      

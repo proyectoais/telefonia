@@ -61,6 +61,7 @@
 
  						<input type="submit" value= "Activar"/>
 					</form>
+					<?php mysql_close($link); ?>
 				</fieldset>
 			</div>
 		</div>
