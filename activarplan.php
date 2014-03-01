@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/validaciones.js"></script>
+
 <script type="text/javascript" >
   $(document).ready(function(){
     $("#num_act_plan").change(function(){
@@ -18,6 +20,7 @@
   });
 });
 </script>
+
 </head>
 <body>
 	<div id="contenedor">
@@ -35,12 +38,12 @@
 			<div id="espac_cont">
 				<fieldset id="fields">
 					<legend>Activar Plan</legend>
-					<form action="add.php" method="post">
+					<form id ="foracp" method="post" onSubmit="return validar()">
  						<label>Seleccione el n&uacute;mero de tel&eacute;fono:</label>
 							<?php include("conexion.php"); ?>
 
-							<select id="num_act_plan" name="num_act_plan">
-								<option value="0">--</option>
+							<select id="num_act_plan" name="num_act_plan" class="required">
+								<option value="--">--</option>
 							<?php
 								$B_BUSCAR= mysql_query ("SELECT * FROM telefono",$link);
 								$R_BUSCAR=mysql_fetch_assoc($B_BUSCAR);
