@@ -6,6 +6,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/validaciones.js"></script>
 
+<!-- script para aparecer la imagen del satelite -->
+	<script type="text/javascript">
+		function ActivarImagen(){
+		var contenedor = document.getElementById("imagen");
+		contenedor.style.display = "block";
+		return true;
+		}
+	</script>
 
 
 </head>
@@ -24,9 +32,11 @@
 			</div>
 			<div id="espac_cont">
 				
+	
 					<!-- AQUI FALTA COLOCAR EN ACTION EL METODO ADECUADO -->
+					<!--action="add.php"-->
 				<div id ="capula_simular">
-					<form id ="foracp" method="post" action="add.php" onSubmit="return validar()">
+					<form id ="foracp" method="post" >
  						<label>Seleccione un n&uacute;mero de tel&eacute;fono:</label>
 							<?php include("conexion.php"); ?>
 
@@ -68,10 +78,23 @@
 								<br>
 								<img src = 'imagen/iphone.jpg' style= "width:213px; height:189px;">
 						
-						<div id = "boton_simular">
-							<input type="submit" value= "Simular"/>
+						<br>
+						<br>
+						
+						<div id="imagen"style="display:none; position: absolute; margin: -167px 3px 3px -127px;">
+						<img src= 'imagen/Antena.gif' name="imagen2">
 						</div>
+						
+						<div id = "boton_registrar">
+						<input type="submit"  value= "Registrar llamada" style="margin: 5px 6px 0px -102px; position:static; width:151px; height:30px;"/>
+					</div>
+						
+				</div>
 					</form>
+					
+					<div id = "boton_simular">
+						<input type="submit" onclick="ActivarImagen()" value= "Simular" style="margin: -41px 6px 0px 199px; position:static; width:151px; height:30px;"/>
+					</div>
 				</div>
 					<?php mysql_close($link); ?>
 				
