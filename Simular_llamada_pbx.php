@@ -8,8 +8,8 @@
 
 <!-- script para aparecer la imagen del satelite -->
 	<script type="text/javascript">
-		function ActivarImagen(){
-		var contenedor = document.getElementById("imagen");
+		function ActivarPBX(){
+		var contenedor = document.getElementById("PBX");
 		contenedor.style.display = "block";
 		return true;
 		}
@@ -18,7 +18,7 @@
 
 </head>
 <body>
-	<div id="contenedor">
+	<div id="contenedor_simular">
 		<div id="encabezado">
 			<img src="imagen/logo.png">
 			<label id="titulo">Central Telef&oacute;nica MIH C.A.</label>
@@ -81,19 +81,22 @@
 						<br>
 						<br>
 						
-						<div id="imagen"style="display:none; position: absolute; margin: -167px 3px 3px -127px;">
-						<img src= 'imagen/Antena.gif' name="imagen2">
+						<div id="PBX"  style=" display:none; position: absolute; margin: -146px 3px 3px -178px;">
+						<img src= 'imagen/enrutador.png' name="imagen2" style="width:164px;"><br>
+						<br>
+						
+						<img src = 'imagen/Telefonos.jpg' name="imagen3" style ="width: 159px;">
 						</div>
 						
 						<div id = "boton_registrar">
-						<input type="submit"  value= "Registrar llamada" style="margin: -85px 6px 0px 163px; position:static; width:151px; height:30px;"/>
+						<input type="submit"  value= "Registrar llamada" style="margin: -87px 6px 0px 165px; position:static; width:151px; height:30px;"/>
 					</div>
 						
 				</div>
 					</form>
 					
-					<div id = "boton_simular">
-						<input type="submit" onclick="ActivarImagen()" value= "Simular" style="margin: -154px 6px 0px 620px; position:static; width:151px; height:30px;"/>
+					<div id = "boton_activar">
+						<input type="submit" onclick="ActivarPBX()" value= "Agregar PBX" style="margin: -158px 6px 0px 623px; position:static; width:151px; height:30px;"/>
 					</div>
 				</div>
 					<?php mysql_close($link); ?>

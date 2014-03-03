@@ -11,6 +11,13 @@ body
 	margin: 0px auto 0px auto;
 }
 
+#contenedor_simular{
+background: white;
+	width: 800px;
+	height: 694px;
+	margin: 0px auto 0px auto;
+}
+
 hr
 {
 	height: 3px;
