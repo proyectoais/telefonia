@@ -6,7 +6,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/validaciones.js"></script>
 
-<!-- script para aparecer la imagen del satelite -->
 	<script type="text/javascript">
 		function ActivarPBX(){
 		var contenedor = document.getElementById("PBX");
