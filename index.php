@@ -17,7 +17,8 @@
 	  				include("head.html");
 	  			?>
 			</div>
-	
+			
+	<!-- Texto de Bienvenida -->
 			<div id="espac_cont1">
 				Bienvenido a la Central Telef&oacute;nica MIH, donde te ofrecemos 
 				diversas opciones de la telefon&iacute;a en general.. <br><br>
