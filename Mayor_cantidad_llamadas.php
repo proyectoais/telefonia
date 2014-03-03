@@ -11,7 +11,7 @@
 <body>
 	<div id="contenedor">
 		<div id="encabezado">
-			<img src="imagen/logo.png">
+			<a href="index.php"><img src="imagen/logo.png"></a>
 			<label id="titulo">Central Telef&oacute;nica MIH C.A.</label>
 		</div>
 		<hr>
@@ -23,7 +23,9 @@
 			</div>
 			<div id="espac_cont">
 			
-				<div id="cantidad_llamdas" style="margin-top: 21px;margin-left: 36px;">
+				<div id="cantidad_llamdas">
+				
+					<center><p style="font-size: 18px;font-weight: bold;">Modelos de Teléfonos con mayor cantidad de llamadas salientes<p></center>
 					<?php 
 						$link = mysql_connect("localhost", "root", NULL); 
 						mysql_select_db("bd_ais", $link); 
