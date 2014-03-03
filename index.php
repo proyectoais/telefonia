@@ -17,9 +17,23 @@
 	  				include("head.html");
 	  			?>
 			</div>
-			<div id="espac_cont">
-				Bienvenido, arreglar css y texto de bienvenida
+	
+			<div id="espac_cont1">
+				Bienvenido a la Central Telef&oacute;nica MIH, donde te ofrecemos 
+				diversas opciones de la telefon&iacute;a en general.. <br><br>
 			</div>
+			
+			<div id="espac_cont2">
+				&#10003; Reportes de llamadas <br>
+				&#10003; Asociaciones de planes y servicios<br>
+				&#10003; Registros de llamadas<br>
+				&#10003; y mucho mas !!
+			</div>
+			<div id="espac_cont3">
+				<br><br>
+				Esperamos disfrutes de nuestros servicios!!!
+			</div>
+		
 		</div>
 
 		<!--<div id="pie">

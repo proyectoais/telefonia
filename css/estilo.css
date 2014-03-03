@@ -204,3 +204,36 @@ select{
 .menu a.signout { background: url(../imagen/logo.png) no-repeat 6px center; }
 
 */
+
+
+
+#espac_cont1{
+margin: 41px 7px 20px 77px;
+font-size: 18px;
+font-weight: bold;
+}
+
+#espac_cont2{
+margin: 0px 0px 0px 77px;
+font-size: 17px;
+font-style: italic;
+}
+
+#espac_cont3{
+margin: 115px 0px 0px 216px;
+font-size: 18px;
+font-weight: bold;
+font-style: italic;
+
+}
+
+#capula_simular{
+margin: 44px 12px 11px 33px;
+display: inline-block;
+}
+
+#capula_simular2{
+width: 319px;
+margin: -283px 9px 11px 458px;
+display: inline-table;
+}
