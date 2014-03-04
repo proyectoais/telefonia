@@ -2,8 +2,7 @@
 $nu= $_POST["numero"];
  if(isset($_POST["numero"]))
  {
-    $opciones = '<option value="0"> Elige un modelo</option>';
-
+    
     include("conexion.php");
 
     $aux = "SELECT * FROM telefono where Numero= '$nu'";
@@ -24,6 +23,6 @@ $nu= $_POST["numero"];
 	}while($ej_busq=mysql_fetch_assoc($busq));
 	echo "</select>";
 
-    php mysql_close($link); 
+    mysql_close($link); 
  }
 ?>
