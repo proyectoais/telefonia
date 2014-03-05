@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-03-2014 a las 04:31:36
--- Versión del servidor: 5.6.12-log
--- Versión de PHP: 5.4.16
+-- Tiempo de generación: 05-03-2014 a las 16:11:11
+-- Versión del servidor: 5.5.8
+-- Versión de PHP: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `llamada` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `llamada`
+-- Volcar la base de datos para la tabla `llamada`
 --
 
 INSERT INTO `llamada` (`Id`, `Fecha`, `Hora`, `Duracion`, `Costo`) VALUES
@@ -58,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `llamada_telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `llamada_telefono`
+-- Volcar la base de datos para la tabla `llamada_telefono`
 --
 
 INSERT INTO `llamada_telefono` (`id_tfno`, `Id_llamada`, `fecha`) VALUES
@@ -84,17 +83,17 @@ CREATE TABLE IF NOT EXISTS `plan` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
--- Volcado de datos para la tabla `plan`
+-- Volcar la base de datos para la tabla `plan`
 --
 
 INSERT INTO `plan` (`Id_plan`, `Nombre`, `Tipo_plan`, `Tipo_tele`, `Precio`, `Cant_activaciones`, `Cant_desact`) VALUES
-(1, 'Plan habla 200', 'normal', 'fija', 80, 0, 0),
-(2, 'Plan habla 500', 'especial', 'celular', 20, 2, 0),
+(1, 'Plan habla 200', 'normal', 'fija', 80, 4, 0),
+(2, 'Plan habla 500', 'especial', 'celular', 20, 5, 0),
 (3, 'Plan habla mas', 'normal', 'celular', 80, 1, 0),
 (4, 'Plan sin renta', 'normal', 'Celular', 100, 0, 0),
-(5, 'Hogar con todos', 'Normal', 'Fija', 80, 1, 1),
+(5, 'Hogar con todos', 'Normal', 'Fija', 80, 2, 1),
 (6, 'Plan full', 'normal', 'Celular', 300, 0, 0),
-(7, 'Plan 40 llamadas', 'Normal', 'Fija', 20, 1, 0);
+(7, 'Plan 40 llamadas', 'Normal', 'Fija', 20, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -110,20 +109,23 @@ CREATE TABLE IF NOT EXISTS `plan_telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `plan_telefono`
+-- Volcar la base de datos para la tabla `plan_telefono`
 --
 
 INSERT INTO `plan_telefono` (`id_tfno`, `id_plan`, `fecha`) VALUES
-('02120983478', 7, '2014-03-05 01:03:43'),
-('02121234567', 7, '2014-03-05 01:32:22'),
-('02127652314', 1, '2014-03-05 01:30:01'),
-('02129873456', 1, '2014-03-05 01:29:10'),
-('02129873456', 5, '2014-03-05 01:27:16'),
-('04123450976', 2, '2014-03-05 01:04:45'),
-('04123450976', 3, '2014-03-05 01:32:55'),
-('04147483647', 2, '2014-03-05 01:06:02'),
-('04169856734', 2, '2014-03-05 00:30:32'),
-('4124756630', 2, '2014-03-01 17:23:04'),
+('02120983478', 1, '2014-03-05 11:20:21'),
+('02120983478', 5, '2014-03-05 11:28:23'),
+('02120983478', 7, '2014-03-04 20:33:43'),
+('02121234567', 1, '2014-03-05 11:21:06'),
+('02121234567', 7, '2014-03-04 21:02:22'),
+('02127652314', 1, '2014-03-04 21:00:01'),
+('02129873456', 1, '2014-03-04 20:59:10'),
+('02129873456', 5, '2014-03-04 20:57:16'),
+('04123450976', 2, '2014-03-04 20:34:45'),
+('04123450976', 3, '2014-03-04 21:02:55'),
+('04147483647', 2, '2014-03-04 20:36:02'),
+('04169856734', 2, '2014-03-04 20:00:32'),
+('4124756630', 2, '2014-03-01 12:53:04'),
 ('4147483647', 2, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -141,11 +143,11 @@ CREATE TABLE IF NOT EXISTS `sva` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `sva`
+-- Volcar la base de datos para la tabla `sva`
 --
 
 INSERT INTO `sva` (`Id`, `Nombre`, `Cant_activaciones`, `Cant_desact`) VALUES
-(1, 'Noches y fines', 2, 0),
+(1, 'Noches y fines', 3, 5),
 (2, 'Escribe pegado', 1, 1),
 (3, 'Llamadas internacionales', 0, 0),
 (4, 'Habla pegado', 1, 0),
@@ -166,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `sva_telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `sva_telefono`
+-- Volcar la base de datos para la tabla `sva_telefono`
 --
 
 INSERT INTO `sva_telefono` (`id_tfno`, `id_sva`, `fecha`) VALUES
@@ -191,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `telefono` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `telefono`
+-- Volcar la base de datos para la tabla `telefono`
 --
 
 INSERT INTO `telefono` (`Numero`, `Marca`, `Modelo`, `Fabricacion`, `Tipo`) VALUES
@@ -203,7 +205,3 @@ INSERT INTO `telefono` (`Numero`, `Marca`, `Modelo`, `Fabricacion`, `Tipo`) VALU
 ('04124756630', 'Blackberry', 'Curve 8520', 2008, 'celular'),
 ('04147483647', 'Nokia', 'X3-02', 2010, 'celular'),
 ('04169856734', 'Blackberry', 'Curve', 2010, 'celular');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
