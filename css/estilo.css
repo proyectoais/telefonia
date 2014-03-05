@@ -34,7 +34,7 @@ hr
 
 }
 
-#encabezado > img 
+#encabezado > a >img 
 {
     padding-top: 5px;
 }
