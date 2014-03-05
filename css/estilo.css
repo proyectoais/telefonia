@@ -82,6 +82,7 @@ select{
 {
     width: 280px;
     margin: 5px auto 0px auto;
+    text-align: justify;
 }
 
 
@@ -99,7 +100,7 @@ select{
  
 .menu {
     height: 40px;
-    width: 551px;
+    width: 424px;
     margin: 0px auto 0px auto;
     background: #4c4e5a;
     background: -webkit-linear-gradient(top, #4c4e5a 0%,#2c2d33 100%);
@@ -195,8 +196,8 @@ select{
 
 
 .menu ul li a {
-    width: 235px;
-    padding: 4px 0 4px 40px;
+    width: 164px;
+    /*padding: 4px 0 4px 40px;*/
     margin: 0;
  
     border: none;
@@ -204,6 +205,19 @@ select{
 }
  
 .menu ul li:last-child a { border: none; }
+
+
+
+#activado{
+width: 300px;
+height:100px; 
+margin: 60px auto 0px auto;
+border-width:3px;
+border-style:double;
+
+
+
+}
 
 /*
 .menu a.documents { background: url(../imagen/logo.png) no-repeat 6px center; }

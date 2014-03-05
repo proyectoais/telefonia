@@ -3,7 +3,7 @@
 <title>MIH C.A.</title>
 <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/validaciones.js"></script>
 
 <script type="text/javascript" >
