@@ -9,7 +9,7 @@
 <body>
 	<div id="contenedor">
 		<div id="encabezado">
-			<img src="imagen/logo.png">
+			<a href="index.php"><img src="imagen/logo.png"></a>
 			<label id="titulo">Central Telef&oacute;nica MIH C.A.</label>
 		</div>
 		<hr>
