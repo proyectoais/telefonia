@@ -59,7 +59,7 @@
      							<option selected value="--">--</option>
      						</select>
 
- 						<input type="submit" value= "Activar"/>
+ 						<input type="submit" value= "Desactivar"/>
 					</form>
 				</fieldset>
 			</div>

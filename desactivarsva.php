@@ -21,7 +21,7 @@
 			</div>
 			<div id="espac_cont">
 				<fieldset id="fields">
-					<legend>Desactivar Plan</legend>
+					<legend>Desactivar SVA</legend>
 					<form id ="foracp" method="post" action="delete2.php" onSubmit="return validarsva()">
  						<label>Seleccione el n&uacute;mero de tel&eacute;fono:</label>
 							<?php include("conexion.php"); ?>
@@ -57,7 +57,7 @@
      							?>
      						</select>
 
- 						<input type="submit" value= "Activar"/>
+ 						<input type="submit" value= "Desactivar"/>
 					</form>
 				</fieldset>
 			</div>
